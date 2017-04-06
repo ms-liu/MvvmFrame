@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <data>
+        <variable
+            name="mvvm"
+            type="com.mmyz.mvvmprojectframe.mvvm.MvvmBean"/>
+        <variable
+            name="clickHandler"
+            type="com.mmyz.mvvmprojectframe.mvvm.eventhandle.ClickHandler"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@{mvvm.title}"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+        <TextView
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@{mvvm.descrption}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+        <Button
+            android:id="@+id/view"
+            android:text="请求列表数据"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:onClick="@{clickHandler::refreshView}"
+            />
+        <!--android:onClick="@{()->clickHandler.clickAddAdapter()}"-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

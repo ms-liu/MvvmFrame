@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="user"
+            type="com.mmyz.mvvmprojectframe.mvvm.UserInfoBean"/>
+    </data>
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:padding="12dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@{user.mUsername}"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="@{user.mAge > 20?String.valueOf(user.mAge):user.defaultAgeTip}"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="@{user.mSex != 1?`男`:`女`}"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</layout>
