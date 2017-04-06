@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.mmyz.mvvmprojectframe.mvpvm.MvpvmActivity;
 import com.mmyz.mvvmprojectframe.mvvm.MvvmActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_mvpvm).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MvvmActivity.class));
+                startActivity(new Intent(MainActivity.this, MvpvmActivity.class));
             }
         });
 
