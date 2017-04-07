@@ -53,24 +53,7 @@ public class MvpVMPresenter implements IPresenter<MvvmModel,IMvpVMView> {
                 mView.showData(new MvpVMBean());
             }
         },1000);
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Thread.sleep(1000);
-//                    runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            progressDialog.dismiss();
-//                            binder.setMvvm(new MvvmBean());
-//                            binder.setClickHandler(new ClickHandler(userInfoAdapter));
-//                        }
-//                    });
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }).start();
+
     }
 
 }
